@@ -26,7 +26,7 @@
 }
 @media (max-width: 720px) {
   .banner {
-    padding: 20px 0;
+    padding: 40px 10px;
   }
 }
 @media (max-width: 520px) {
