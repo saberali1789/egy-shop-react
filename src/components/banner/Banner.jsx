@@ -1,12 +1,20 @@
-import './banner.css'
+import "./banner.css";
+import { banner } from "../../data/banner";
 
 const Banner = () => {
+  // const {title, image} = banner
   return (
     <div className="banner">
-        <img src="./shoes.png" alt="shoes" className="banner-img" />
-        <img src="./public/images/banners/house.png" alt="house" className="banner-img" />
+      {banner.map((banner) => (
+        <img
+          key={banner.id}
+          src={banner.image}
+          alt={banner.title}
+          className="banner-img"
+        />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
