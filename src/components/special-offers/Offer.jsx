@@ -28,7 +28,7 @@ const Offer = ({ offer }) => {
           <b className="offer-price-item">${price}</b>
           <b className="offer-final-price-item">${finalPrice}</b>
         </div>
-        <div className="offer-see-more">شاهد المزيد ....</div>
+        <div className="offer-see-more">شاهد المزيد...</div>
         <div className="offer-discount"> خصم {discount}% </div>
       </div>
     </div>
