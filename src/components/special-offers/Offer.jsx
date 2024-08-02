@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import Rating from "../rating/Rating";
+import { Link } from "react-router-dom";
 
 const Offer = ({ offer }) => {
-  const { firstImage, secondImage, title, price, discount, rating, reviews } =
+  const { firstImage, secondImage, title, price, discount, rating, reviews, id } =
     offer;
 
   const [imageSrc, setImageSrc] = useState(firstImage);
@@ -28,7 +29,7 @@ const Offer = ({ offer }) => {
           <b className="offer-price-item">${price}</b>
           <b className="offer-final-price-item">${finalPrice}</b>
         </div>
-        <div className="offer-see-more">شاهد المزيد...</div>
+        <Link to={`/special-offer/${id}`} className="offer-see-more">شاهد المزيد...</Link>
         <div className="offer-discount"> خصم {discount}% </div>
       </div>
     </div>

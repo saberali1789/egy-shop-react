@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Rating from "../rating/Rating";
 import "./slider.css";
+import { Link } from "react-router-dom";
 
 // eslint-disable-next-line no-unused-vars
 const Slider = ({ data }) => {
@@ -26,12 +27,12 @@ const Slider = ({ data }) => {
         className="slider-wrapper"
       >
         {data.map((item) => (
-          <div className="slide" key={item.id}>
+          <Link to={`/products/${item.id}`} className="slide" key={item.id}>
             <img src={item.image} alt={item.title} className="slide-image" />
             <h3 className="slide-title">{item.title}</h3>
             <Rating rating={item.rating} reviews={item.reviews} />
             <div className="slide-price">{item.price}</div>
-          </div>
+          </Link>
         ))}
       </div>
       <button

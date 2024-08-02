@@ -1,30 +1,26 @@
 /* eslint-disable no-unused-vars */
-import Banner from "./components/banner/Banner";
-import Brands from "./components/brands/Brands";
-import Category from "./components/category/Category";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import HeadingTitle from "./components/heading-title/HeadingTitle";
-import Slider from "./components/slider/Slider";
-import SpecialOffers from "./components/special-offers/SpecialOffers";
-import { products } from "./data/products";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Cart from "./pages/cart/Cart";
+import Products from "./pages/products/Products";
+import SingleProduct from "./pages/single-product/SingleProduct";
+import SpecialOfferPage from "./pages/special-offer-page/SpecialOfferPage";
 
 const App = () => {
-  const laptops = products.filter((laptop) => laptop.isLaptop === true);
-  const mobiles = products.filter((laptop) => laptop.isLaptop === false);
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-      <Banner />
-      <Category />
-      <SpecialOffers />
-      <HeadingTitle title="الجديد من اللاتوب" />
-      <Slider data={laptops} />
-      <HeadingTitle title=" الجديد من الموبايل" />
-      <Slider data={mobiles} />
-      <Brands />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<SingleProduct />} />
+        <Route path="/special-offer/:id" element={<SpecialOfferPage />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 };
 

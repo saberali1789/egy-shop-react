@@ -1,4 +1,8 @@
 /* eslint-disable react/prop-types */
+
+import { Link } from "react-router-dom";
+
+
 const Navbar = ({setToggle, toggle}) => {
   return (
     <div>
@@ -7,12 +11,12 @@ const Navbar = ({setToggle, toggle}) => {
           <i onClick={() => setToggle(false)} className="bi bi-x-lg"></i>
         </div>
         <ul className="navbar-links">
-          <li onClick={() => setToggle(false)} className="navbar-link">
+          <Link to="/" onClick={() => setToggle(false)} className="navbar-link">
             الرئيسية
-          </li>
-          <li onClick={() => setToggle(false)} className="navbar-link">
+          </Link>
+          <Link to="/products" onClick={() => setToggle(false)} className="navbar-link">
             إلكترونيات وموبايل
-          </li>
+          </Link>
           <li onClick={() => setToggle(false)} className="navbar-link">
             منزل ومطبخ
           </li>
