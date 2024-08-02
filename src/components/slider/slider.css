@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 28px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -25,7 +25,7 @@
   cursor: pointer;
   z-index: 2;
   background-color: var(--main-color);
-  border: 2px solid var(--strong-red-color);
+  border: 3px solid var(--strong-red-color);
   color: var(--strong-red-color);
 
 }
@@ -56,8 +56,26 @@ padding: 5px;
 margin: 0 5px;
 }
 
+.slide:first-of-type{
+  border-radius: 0 15px 15px 0;
+}
+.slide:last-of-type{
+  border-radius: 15px 0 0 15px;
+}
+
 .slide-image {
     width: 70%;
     height: auto;
     object-fit: contain;
+}
+
+.slide-title {
+  color: var(--primary-color);
+  font-size: 17px;
+}
+
+.slide-price {
+  color: var(--primary-color);
+  font-size: 21px;
+  font-weight: bold;
 }
