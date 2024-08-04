@@ -109,13 +109,17 @@
   }
 
   .special-offer-page-img-wrapper {
-    width: 140%;
+    width: 100%;
     border: none;
     margin-bottom: 20px;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: flex-end;
     gap: 30px;
+  }
+
+  .special-offer-page-img {
+    width: 75%;
   }
 
   .special-offer-page-select-img {
@@ -127,6 +131,8 @@
     width: 100%;
   }
 }
+
+
 @media (max-width: 520px) {
 .special-offer-page {
   flex-direction: column;
