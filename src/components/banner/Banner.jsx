@@ -1,6 +1,7 @@
 import "./banner.css";
 import { banner } from "../../data/banner";
 
+
 const Banner = () => {
   // const {title, image} = banner
   return (
